@@ -1,0 +1,972 @@
+fileFormatVersion: 2
+guid: ee0a3bc8ad376bf41b09d2a9cba999cb
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -4993209793623577178
+    second: dizzy_0
+  - first:
+      213: -8311992396915028965
+    second: dizzy_1
+  - first:
+      213: -7804422848794570137
+    second: dizzy_2
+  - first:
+      213: 6468283453443738131
+    second: dizzy_3
+  - first:
+      213: 5265945057067700676
+    second: dizzy_4
+  - first:
+      213: 8621901150449129480
+    second: dizzy_5
+  - first:
+      213: 5230970800127482464
+    second: dizzy_6
+  - first:
+      213: -4545479481483022006
+    second: dizzy_7
+  - first:
+      213: 7054872685228862370
+    second: dizzy_8
+  - first:
+      213: 74878348179117673
+    second: dizzy_9
+  - first:
+      213: -4141049085147067801
+    second: dizzy_10
+  - first:
+      213: 7339879353326810505
+    second: dizzy_11
+  - first:
+      213: 1696154997269006784
+    second: dizzy_12
+  - first:
+      213: -7466856576970082209
+    second: dizzy_13
+  - first:
+      213: -1830762864178615469
+    second: dizzy_14
+  - first:
+      213: 5830768535191818301
+    second: dizzy_15
+  - first:
+      213: -3437718208589131395
+    second: dizzy_16
+  - first:
+      213: 395145177998650077
+    second: dizzy_17
+  - first:
+      213: 7180936632844309071
+    second: dizzy_18
+  - first:
+      213: 1914626951031820871
+    second: dizzy_19
+  - first:
+      213: 7960212307682777151
+    second: dizzy_20
+  - first:
+      213: 4230994267557461426
+    second: dizzy_21
+  - first:
+      213: -5708450075402740888
+    second: dizzy_22
+  - first:
+      213: -5380958524382152148
+    second: dizzy_23
+  - first:
+      213: 4905150012140950041
+    second: dizzy_24
+  - first:
+      213: -766513906631807091
+    second: dizzy_25
+  - first:
+      213: 3764835800525711425
+    second: dizzy_26
+  - first:
+      213: 9097831174510313473
+    second: dizzy_27
+  - first:
+      213: 5724867320372786582
+    second: dizzy_28
+  - first:
+      213: 6377986683180990937
+    second: dizzy_29
+  - first:
+      213: -7848216247038975538
+    second: dizzy_30
+  - first:
+      213: -8571930095549555061
+    second: dizzy_31
+  - first:
+      213: -6676447591831867710
+    second: dizzy_32
+  - first:
+      213: -2419756939393122695
+    second: dizzy_33
+  - first:
+      213: 3069393098717683110
+    second: dizzy_34
+  - first:
+      213: 3421106723273701340
+    second: dizzy_35
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 8
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 512
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 512
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: dizzy_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 229
+        width: 27
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6ada01ad52e84bab0800000000000000
+      internalID: -4993209793623577178
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dizzy_1
+      rect:
+        serializedVersion: 2
+        x: 27
+        y: 229
+        width: 27
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b1cc12e24fed5ac80800000000000000
+      internalID: -8311992396915028965
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dizzy_2
+      rect:
+        serializedVersion: 2
+        x: 54
+        y: 229
+        width: 27
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 76258a4c4ce11b390800000000000000
+      internalID: -7804422848794570137
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dizzy_3
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 229
+        width: 27
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 31a0d0dc785f3c950800000000000000
+      internalID: 6468283453443738131
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dizzy_4
+      rect:
+        serializedVersion: 2
+        x: 108
+        y: 229
+        width: 27
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4c19e351125641940800000000000000
+      internalID: 5265945057067700676
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dizzy_5
+      rect:
+        serializedVersion: 2
+        x: 135
+        y: 229
+        width: 27
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8085d016a6527a770800000000000000
+      internalID: 8621901150449129480
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dizzy_6
+      rect:
+        serializedVersion: 2
+        x: 162
+        y: 229
+        width: 27
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 06a1a045a34289840800000000000000
+      internalID: 5230970800127482464
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dizzy_7
+      rect:
+        serializedVersion: 2
+        x: 189
+        y: 229
+        width: 27
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a41b06c9e763be0c0800000000000000
+      internalID: -4545479481483022006
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dizzy_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 202
+        width: 27
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2ab2ca23451f7e160800000000000000
+      internalID: 7054872685228862370
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dizzy_9
+      rect:
+        serializedVersion: 2
+        x: 27
+        y: 202
+        width: 27
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 966959006750a0100800000000000000
+      internalID: 74878348179117673
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dizzy_10
+      rect:
+        serializedVersion: 2
+        x: 54
+        y: 202
+        width: 27
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 76a4a5a1cc90886c0800000000000000
+      internalID: -4141049085147067801
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dizzy_11
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 202
+        width: 27
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 985b44d226d7cd560800000000000000
+      internalID: 7339879353326810505
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dizzy_12
+      rect:
+        serializedVersion: 2
+        x: 108
+        y: 202
+        width: 27
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0c90930cbf3f98710800000000000000
+      internalID: 1696154997269006784
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dizzy_13
+      rect:
+        serializedVersion: 2
+        x: 135
+        y: 202
+        width: 27
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f58b8ec1185606890800000000000000
+      internalID: -7466856576970082209
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dizzy_14
+      rect:
+        serializedVersion: 2
+        x: 162
+        y: 202
+        width: 27
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 35b28a4ffd2d796e0800000000000000
+      internalID: -1830762864178615469
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dizzy_15
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 175
+        width: 27
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d3012ab071d0be050800000000000000
+      internalID: 5830768535191818301
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dizzy_16
+      rect:
+        serializedVersion: 2
+        x: 27
+        y: 175
+        width: 27
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d71172bc085ca40d0800000000000000
+      internalID: -3437718208589131395
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dizzy_17
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 148
+        width: 27
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dda61512276db7500800000000000000
+      internalID: 395145177998650077
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dizzy_18
+      rect:
+        serializedVersion: 2
+        x: 27
+        y: 148
+        width: 27
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f42564342dfc7a360800000000000000
+      internalID: 7180936632844309071
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dizzy_19
+      rect:
+        serializedVersion: 2
+        x: 54
+        y: 148
+        width: 27
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 74214ad511f129a10800000000000000
+      internalID: 1914626951031820871
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dizzy_20
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 148
+        width: 27
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f38df183bea587e60800000000000000
+      internalID: 7960212307682777151
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dizzy_21
+      rect:
+        serializedVersion: 2
+        x: 108
+        y: 148
+        width: 27
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2bdf97c9ed287ba30800000000000000
+      internalID: 4230994267557461426
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dizzy_22
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 121
+        width: 27
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 86b519da6e287c0b0800000000000000
+      internalID: -5708450075402740888
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dizzy_23
+      rect:
+        serializedVersion: 2
+        x: 27
+        y: 121
+        width: 27
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c2a771b4bbef255b0800000000000000
+      internalID: -5380958524382152148
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dizzy_24
+      rect:
+        serializedVersion: 2
+        x: 54
+        y: 121
+        width: 27
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9121aab82f7921440800000000000000
+      internalID: 4905150012140950041
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dizzy_25
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 121
+        width: 27
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d8f60dfb9abcc55f0800000000000000
+      internalID: -766513906631807091
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dizzy_26
+      rect:
+        serializedVersion: 2
+        x: 108
+        y: 121
+        width: 27
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1482200b6326f3430800000000000000
+      internalID: 3764835800525711425
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dizzy_27
+      rect:
+        serializedVersion: 2
+        x: 135
+        y: 121
+        width: 27
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1008927304df14e70800000000000000
+      internalID: 9097831174510313473
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dizzy_28
+      rect:
+        serializedVersion: 2
+        x: 162
+        y: 121
+        width: 27
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 695ff090f70d27f40800000000000000
+      internalID: 5724867320372786582
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dizzy_29
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 94
+        width: 27
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9d1cc29a819238850800000000000000
+      internalID: 6377986683180990937
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dizzy_30
+      rect:
+        serializedVersion: 2
+        x: 27
+        y: 94
+        width: 27
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ec1eacaa7e8851390800000000000000
+      internalID: -7848216247038975538
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dizzy_31
+      rect:
+        serializedVersion: 2
+        x: 54
+        y: 94
+        width: 27
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b8ed94f7ef26a0980800000000000000
+      internalID: -8571930095549555061
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dizzy_32
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 94
+        width: 27
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2ce695fd94e7853a0800000000000000
+      internalID: -6676447591831867710
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dizzy_33
+      rect:
+        serializedVersion: 2
+        x: 108
+        y: 94
+        width: 27
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 97ebfa052eb4b6ed0800000000000000
+      internalID: -2419756939393122695
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dizzy_34
+      rect:
+        serializedVersion: 2
+        x: 135
+        y: 94
+        width: 27
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6ad5a1dc2cca89a20800000000000000
+      internalID: 3069393098717683110
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dizzy_35
+      rect:
+        serializedVersion: 2
+        x: 162
+        y: 94
+        width: 27
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd7fd6360763a7f20800000000000000
+      internalID: 3421106723273701340
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
