@@ -8,6 +8,7 @@ public class CharacterMovement : MonoBehaviour
     public float jumpForce = 12.0f;
 
     private bool _jumpIntent = false;
+    private float _deltaX = .0f;
 
     private Rigidbody2D rb;
     void Start()
@@ -21,13 +22,16 @@ public class CharacterMovement : MonoBehaviour
         {
             _jumpIntent = true;
         }
+        _deltaX += Input.GetAxis("Horizontal") * Speed * Time.deltaTime;
     }
 
     private void FixedUpdate()
     {
-        float deltaX = Input.GetAxis("Horizontal") * Speed * Time.deltaTime;
-        Vector2 movement = new Vector2(deltaX, rb.velocity.y);
-        rb.velocity = movement;
+        if (_deltaX != .0f)
+        {
+            Vector2 movement = new Vector2(_deltaX, rb.velocity.y);
+            rb.velocity = movement;
+        }
 
         if (_jumpIntent)
         {
@@ -35,5 +39,6 @@ public class CharacterMovement : MonoBehaviour
         }
 
         _jumpIntent = false;
+        _deltaX = .0f;
     }
 }
