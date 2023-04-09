@@ -2,9 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent(typeof(BoxCollider2D))]
 public class GroundCheckOverlap : BaseGroundCheck
 {
-    public float CheckHeight = 0.1f;
     public LayerMask mask;
 
     [SerializeField]
