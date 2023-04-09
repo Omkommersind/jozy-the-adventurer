@@ -5,6 +5,8 @@ using UnityEngine;
 public class Grounded : MonoBehaviour
 {
     public float CheckHeight = 0.1f;
+    public LayerMask mask;
+
     [SerializeField]
     private bool _isGrounded = false;
     private Vector3 _max;
@@ -18,15 +20,17 @@ public class Grounded : MonoBehaviour
     void Start()
     {
         _boxCollider2D = GetComponent<BoxCollider2D>();
-        _max = _boxCollider2D.bounds.max;
-        _min = _boxCollider2D.bounds.min;
-        _corner1 = new Vector2(_max.x, _min.y);
-        _corner2 = new Vector2(_min.x, _min.y - CheckHeight);
     }
 
     void Update()
     {
-        Collider2D hit = Physics2D.OverlapArea(_corner1, _corner2);
+        _max = _boxCollider2D.bounds.max;
+        _min = _boxCollider2D.bounds.min;
+        var edgeRadius = _boxCollider2D.edgeRadius;
+
+        _corner1 = new Vector2(_min.x - edgeRadius, _min.y - edgeRadius);
+        _corner2 = new Vector2(_max.x + edgeRadius, _min.y + edgeRadius + CheckHeight);
+        Collider2D hit = Physics2D.OverlapArea(_corner1, _corner2, mask.value);
 
         _isGrounded = false;
         if (hit != null)
@@ -37,7 +41,9 @@ public class Grounded : MonoBehaviour
 
     private void OnDrawGizmos()
     {
+        if (_boxCollider2D == null) return;
         Gizmos.color = new Color(0f, 1f, 0f, 1f);
-        Gizmos.DrawWireCube(new Vector3(_max.x / 2, _max.y / 2, 0.01f), new Vector3(_max.x / 2, _max.y / 2, 0.01f));
+        Gizmos.DrawWireCube(new Vector2((_corner1.x + _corner2.x) / 2, _corner1.y), 
+            new Vector2(_corner2.x - _corner1.x, CheckHeight));
     }
 }

@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent(typeof(Grounded))]
 public class CharacterMovement : MonoBehaviour
 {
     public float Speed = 250.0f;
@@ -9,11 +10,13 @@ public class CharacterMovement : MonoBehaviour
 
     private bool _jumpIntent = false;
     private float _deltaX = .0f;
+    private Grounded _grounded;
 
-    private Rigidbody2D rb;
+    private Rigidbody2D _rb;
     void Start()
     {
-        rb = GetComponent<Rigidbody2D>();
+        _rb = GetComponent<Rigidbody2D>();
+        _grounded = _rb.GetComponent<Grounded>();
     }
 
     void Update()
@@ -29,13 +32,13 @@ public class CharacterMovement : MonoBehaviour
     {
         if (_deltaX != .0f)
         {
-            Vector2 movement = new Vector2(_deltaX, rb.velocity.y);
-            rb.velocity = movement;
+            Vector2 movement = new Vector2(_deltaX, _rb.velocity.y);
+            _rb.velocity = movement;
         }
 
-        if (_jumpIntent)
+        if (_jumpIntent && _grounded.IsGrounded)
         {
-            rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
+            _rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
         }
 
         _jumpIntent = false;
