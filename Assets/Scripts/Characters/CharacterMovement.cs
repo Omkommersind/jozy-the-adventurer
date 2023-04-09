@@ -15,6 +15,7 @@ public class CharacterMovement : MonoBehaviour
     private BaseGroundCheck _grounded;
     private Animator _animator;
     private CharecterDirectionController _charecterDirectionController;
+    private float _initGravityScale;
 
     private Rigidbody2D _rb;
     void Start()
@@ -23,6 +24,7 @@ public class CharacterMovement : MonoBehaviour
         _grounded = GetComponent<BaseGroundCheck>();
         _animator = GetComponent<Animator>();
         _charecterDirectionController = GetComponent<CharecterDirectionController>();
+        _initGravityScale = _rb.gravityScale;
     }
 
     void Update()
@@ -45,10 +47,15 @@ public class CharacterMovement : MonoBehaviour
     private void FixedUpdate()
     {
         var isGrounded = _grounded.IsGrounded;
+
         if (_deltaX != .0f)
         {
-            Vector2 movement = new Vector2(_deltaX, _rb.velocity.y);
-            _rb.velocity = movement;
+            _rb.velocity = new Vector2(_deltaX, _rb.velocity.y);
+            _rb.gravityScale = _initGravityScale;
+        } else if (isGrounded)
+        {
+            _rb.velocity = Vector2.zero;
+            _rb.gravityScale = 0;
         }
 
         if (_jumpIntent && isGrounded)
@@ -62,5 +69,7 @@ public class CharacterMovement : MonoBehaviour
         _animator.SetBool("grounded", isGrounded);
         _jumpIntent = false;
         _deltaX = .0f;
+
+        Messenger<float>.Broadcast(GameEvent.SPEED_CHANGED, _deltaX);
     }
 }
