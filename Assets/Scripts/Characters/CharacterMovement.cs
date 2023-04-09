@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [RequireComponent(typeof(BaseGroundCheck))]
+[RequireComponent(typeof(Animator))]
+[RequireComponent(typeof(CharecterDirectionController))]
 public class CharacterMovement : MonoBehaviour
 {
     public float Speed = 250.0f;
@@ -11,12 +13,16 @@ public class CharacterMovement : MonoBehaviour
     private bool _jumpIntent = false;
     private float _deltaX = .0f;
     private BaseGroundCheck _grounded;
+    private Animator _animator;
+    private CharecterDirectionController _charecterDirectionController;
 
     private Rigidbody2D _rb;
     void Start()
     {
         _rb = GetComponent<Rigidbody2D>();
-        _grounded = _rb.GetComponent<BaseGroundCheck>();
+        _grounded = GetComponent<BaseGroundCheck>();
+        _animator = GetComponent<Animator>();
+        _charecterDirectionController = GetComponent<CharecterDirectionController>();
     }
 
     void Update()
@@ -26,22 +32,34 @@ public class CharacterMovement : MonoBehaviour
             _jumpIntent = true;
         }
         _deltaX += Input.GetAxis("Horizontal") * Speed * Time.deltaTime;
+
+
+        if (_deltaX < 0 && _charecterDirectionController.FaceRight || 
+            _deltaX > 0 && !_charecterDirectionController.FaceRight)
+        {
+            _charecterDirectionController.Flip();
+        }
+        _animator.SetFloat("speed", Mathf.Abs(_deltaX));
     }
 
     private void FixedUpdate()
     {
+        var isGrounded = _grounded.IsGrounded;
         if (_deltaX != .0f)
         {
             Vector2 movement = new Vector2(_deltaX, _rb.velocity.y);
             _rb.velocity = movement;
         }
 
-        if (_jumpIntent && _grounded.IsGrounded)
+        if (_jumpIntent && isGrounded)
         {
             _rb.velocity = new Vector2(_rb.velocity.x, 0);
             _rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
         }
 
+
+        _animator.SetFloat("verticalSpeed", _rb.velocity.y);
+        _animator.SetBool("grounded", isGrounded);
         _jumpIntent = false;
         _deltaX = .0f;
     }
