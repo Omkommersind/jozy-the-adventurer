@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[RequireComponent(typeof(Grounded))]
+[RequireComponent(typeof(BaseGroundCheck))]
 public class CharacterMovement : MonoBehaviour
 {
     public float Speed = 250.0f;
@@ -10,13 +10,13 @@ public class CharacterMovement : MonoBehaviour
 
     private bool _jumpIntent = false;
     private float _deltaX = .0f;
-    private Grounded _grounded;
+    private BaseGroundCheck _grounded;
 
     private Rigidbody2D _rb;
     void Start()
     {
         _rb = GetComponent<Rigidbody2D>();
-        _grounded = _rb.GetComponent<Grounded>();
+        _grounded = _rb.GetComponent<BaseGroundCheck>();
     }
 
     void Update()

@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Grounded : MonoBehaviour
+public class GroundCheckOverlap : BaseGroundCheck
 {
     public float CheckHeight = 0.1f;
     public LayerMask mask;
@@ -15,7 +15,7 @@ public class Grounded : MonoBehaviour
     private Vector2 _corner2;
     private BoxCollider2D _boxCollider2D;
 
-    public bool IsGrounded { get => _isGrounded; }
+    public override bool IsGrounded { get => _isGrounded; }
 
     void Start()
     {
