@@ -34,42 +34,57 @@ public class CharacterMovement : MonoBehaviour
             _jumpIntent = true;
         }
         _deltaX += Input.GetAxis("Horizontal") * Speed * Time.deltaTime;
-
-
-        if (_deltaX < 0 && _charecterDirectionController.FaceRight || 
-            _deltaX > 0 && !_charecterDirectionController.FaceRight)
-        {
-            _charecterDirectionController.Flip();
-        }
-        _animator.SetFloat("speed", Mathf.Abs(_deltaX));
     }
 
     private void FixedUpdate()
     {
         var isGrounded = _grounded.IsGrounded;
 
-        if (_deltaX != .0f)
+        if (isGrounded)
         {
-            _rb.velocity = new Vector2(_deltaX, _rb.velocity.y);
-            _rb.gravityScale = _initGravityScale;
-        } else if (isGrounded)
-        {
-            _rb.velocity = Vector2.zero;
-            _rb.gravityScale = 0;
-        }
+            if (_deltaX < 0 && _charecterDirectionController.FaceRight ||
+                _deltaX > 0 && !_charecterDirectionController.FaceRight)
+            {
+                _charecterDirectionController.Flip();
+            }
+            _animator.SetFloat("speed", Mathf.Abs(_deltaX));
 
-        if (_jumpIntent && isGrounded)
-        {
-            _rb.velocity = new Vector2(_rb.velocity.x, 0);
-            _rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
+            if (_jumpIntent)
+            {
+                UpdateGravityScale(_initGravityScale);
+                _rb.velocity = new Vector2(_rb.velocity.x, 0);
+                _rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
+            } else
+            {
+                if (_deltaX != .0f)
+                {
+                    UpdateGravityScale(.0f);
+                    _rb.velocity = new Vector2(_deltaX, _rb.velocity.y);
+                } else
+                {
+                    _rb.velocity = new Vector2(0, _rb.velocity.y);
+                    UpdateGravityScale(.0f);
+                }
+            }
         }
-
+        else
+        {
+            UpdateGravityScale(_initGravityScale);
+        }
 
         _animator.SetFloat("verticalSpeed", _rb.velocity.y);
         _animator.SetBool("grounded", isGrounded);
         _jumpIntent = false;
         _deltaX = .0f;
 
-        Messenger<float>.Broadcast(GameEvent.SPEED_CHANGED, _deltaX);
+        //Messenger<float>.Broadcast(GameEvent.SPEED_CHANGED, _deltaX);
+    }
+
+    void UpdateGravityScale(float value)
+    {
+        if (_rb.gravityScale != value)
+        {
+            _rb.gravityScale = value;
+        }
     }
 }
