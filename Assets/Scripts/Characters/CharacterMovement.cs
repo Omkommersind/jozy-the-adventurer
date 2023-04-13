@@ -84,6 +84,7 @@ public class CharacterMovement : MonoBehaviour
     void UpdateGravityScale(float value)
     {
         _rb.gravityScale = 1;
+        // Todo
         //if (_rb.gravityScale != value)
         //{
         //    _rb.gravityScale = value;
