@@ -29,8 +29,14 @@ public class GroundCheckRaycast : BaseGroundCheck
         // Left side ray
         _raysList.Add(new Vector3(_boxCollider.bounds.min.x - _edgeRadius, _boxCollider.bounds.min.y, transform.position.z));
 
+        // Center left ray
+        _raysList.Add(new Vector3(_boxCollider.bounds.center.x - _edgeRadius, _boxCollider.bounds.min.y, transform.position.z));
+
         // Center ray
         _raysList.Add(new Vector3(_boxCollider.bounds.center.x, _boxCollider.bounds.min.y, transform.position.z));
+
+        // Center right ray
+        _raysList.Add(new Vector3(_boxCollider.bounds.center.x + _edgeRadius, _boxCollider.bounds.min.y, transform.position.z));
 
         // Right side ray
         _raysList.Add(new Vector3(_boxCollider.bounds.max.x + _edgeRadius, _boxCollider.bounds.min.y, transform.position.z));

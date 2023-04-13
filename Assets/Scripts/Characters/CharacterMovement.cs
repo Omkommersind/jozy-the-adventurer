@@ -7,6 +7,7 @@ using UnityEngine;
 [RequireComponent(typeof(CharecterDirectionController))]
 public class CharacterMovement : MonoBehaviour
 {
+    // Todo: max horizontal velocity
     public float Speed = 250.0f;
     public float jumpForce = 12.0f;
 
@@ -82,9 +83,10 @@ public class CharacterMovement : MonoBehaviour
 
     void UpdateGravityScale(float value)
     {
-        if (_rb.gravityScale != value)
-        {
-            _rb.gravityScale = value;
-        }
+        _rb.gravityScale = 1;
+        //if (_rb.gravityScale != value)
+        //{
+        //    _rb.gravityScale = value;
+        //}
     }
 }
