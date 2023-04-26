@@ -9,6 +9,7 @@ public class CharacterMovement : MonoBehaviour
 {
     // Todo: max horizontal velocity
     public float Speed = 250.0f;
+    public float SpeedInAirModifier = 0.1f;
     public float jumpForce = 12.0f;
 
     private bool _jumpIntent = false;
@@ -48,31 +49,32 @@ public class CharacterMovement : MonoBehaviour
             {
                 _charecterDirectionController.Flip();
             }
-            _animator.SetFloat("speed", Mathf.Abs(_deltaX));
 
             if (_jumpIntent)
             {
-                UpdateGravityScale(_initGravityScale);
-                _rb.velocity = new Vector2(_rb.velocity.x, 0);
                 _rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
-            } else
+            }
+            else
             {
                 if (_deltaX != .0f)
                 {
-                    UpdateGravityScale(.0f);
-                    _rb.velocity = new Vector2(_deltaX, _rb.velocity.y);
-                } else
+                    SetHorizontalVelocity(_deltaX);
+                }
+                else
                 {
-                    _rb.velocity = new Vector2(0, _rb.velocity.y);
-                    UpdateGravityScale(.0f);
+                    SetHorizontalVelocity(0);
                 }
             }
-        }
-        else
+        } else
         {
-            UpdateGravityScale(_initGravityScale);
+            if ((_rb.velocity.x > .0f && _deltaX < .0f) ||
+                (_rb.velocity.x < .0f && _deltaX > .0f))
+            {
+                _rb.AddForce(new Vector2(_deltaX * SpeedInAirModifier, 0), ForceMode2D.Impulse);
+            }
         }
 
+            _animator.SetFloat("speed", Mathf.Abs(_deltaX));
         _animator.SetFloat("verticalSpeed", _rb.velocity.y);
         _animator.SetBool("grounded", isGrounded);
         _jumpIntent = false;
@@ -81,13 +83,8 @@ public class CharacterMovement : MonoBehaviour
         //Messenger<float>.Broadcast(GameEvent.SPEED_CHANGED, _deltaX);
     }
 
-    void UpdateGravityScale(float value)
+    void SetHorizontalVelocity(float value)
     {
-        _rb.gravityScale = 1;
-        // Todo
-        //if (_rb.gravityScale != value)
-        //{
-        //    _rb.gravityScale = value;
-        //}
+        _rb.velocity = new Vector2(value, _rb.velocity.y);
     }
 }
