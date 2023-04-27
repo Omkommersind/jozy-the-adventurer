@@ -7,19 +7,24 @@ public class Inventory : MonoBehaviour
     public int MaxItems = 3;
     private readonly List<InventoryItem> _items = new List<InventoryItem>();
 
+    private void Awake()
+    {
+        Messenger<InventoryItem>.AddListener(GameEvent.ITEM_PUT_TO_INVENTORY, AddItem);
+    }
+
     public List<InventoryItem> GetItems()
     {
         return _items;
     }
 
-    public bool AddItem(InventoryItem item)
+    public void AddItem(InventoryItem item)
     {
-        if (_items.Count >= MaxItems) return false;
-        if (_items.Contains(item)) return false;
+        if (_items.Count >= MaxItems) return;
+        if (_items.Contains(item)) return;
 
         _items.Add(item);
+        item.gameObject.SetActive(false);
         Messenger<List<InventoryItem>>.Broadcast(GameEvent.INVENTORY_CHANGED, _items);
-        return true;
     }
 
     public bool RemoveItem(InventoryItem item)

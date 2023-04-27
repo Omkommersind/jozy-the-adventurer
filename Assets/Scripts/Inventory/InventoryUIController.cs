@@ -8,14 +8,4 @@ public class InventoryTrioUIController : MonoBehaviour
     public Image Item1;
     public Image Item2;
     public Image Item3;
-
-    void Start()
-    {
-
-    }
-
-    void Update()
-    {
-        
-    }
 }
