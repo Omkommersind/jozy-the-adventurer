@@ -74,7 +74,7 @@ public class CharacterMovement : MonoBehaviour
             }
         }
 
-            _animator.SetFloat("speed", Mathf.Abs(_deltaX));
+        _animator.SetFloat("speed", Mathf.Abs(_deltaX));
         _animator.SetFloat("verticalSpeed", _rb.velocity.y);
         _animator.SetBool("grounded", isGrounded);
         _jumpIntent = false;

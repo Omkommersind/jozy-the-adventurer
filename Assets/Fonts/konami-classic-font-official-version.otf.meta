@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: 3ab19c4a7bb715049a6d858c02bf1a1e
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - Konami Classic Font (Official Version)
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: fc3d28dad2ac19c4bafd1914bd0c045c, type: 3}
+  customCharacters: 
+  fontRenderingMode: 2
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
