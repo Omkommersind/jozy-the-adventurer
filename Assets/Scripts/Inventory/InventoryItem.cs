@@ -5,11 +5,11 @@ using UnityEngine;
 public class InventoryItem : MonoBehaviour
 {
     public string Name;
-    private SpriteRenderer _sprite;
+    public Sprite Sprite;
 
     private void Start()
     {
-        _sprite = GetComponent<SpriteRenderer>();
+        Sprite = GetComponent<SpriteRenderer>().sprite;
     }
 
     public void PutIntoInventory()

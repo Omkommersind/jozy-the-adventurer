@@ -49,7 +49,7 @@ public class CharacterActionController : MonoBehaviour
             }
         } else
         {
-            // Try use item from inventory
+            // Try use item from inventory / put it on ground
         }
     }
 }

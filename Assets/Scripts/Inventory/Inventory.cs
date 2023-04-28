@@ -19,12 +19,13 @@ public class Inventory : MonoBehaviour
 
     public void AddItem(InventoryItem item)
     {
-        if (_items.Count >= MaxItems) return;
+        if (_items.Count >= MaxItems) return; // If max items - put last item from inventory on ground
         if (_items.Contains(item)) return;
 
         _items.Add(item);
         item.gameObject.SetActive(false);
         Messenger<List<InventoryItem>>.Broadcast(GameEvent.INVENTORY_CHANGED, _items);
+        Debug.Log(_items);
     }
 
     public bool RemoveItem(InventoryItem item)
