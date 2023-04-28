@@ -9,7 +9,14 @@ public class Inventory : MonoBehaviour
 
     private void Awake()
     {
-        Messenger<InventoryItem>.AddListener(GameEvent.ITEM_PUT_TO_INVENTORY, AddItem);
+        Messenger<InventoryItem>.AddListener(GameEvent.ITEM_PUT_TO_INVENTORY, AddItem);  // Todo: simple method
+    }
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Q))
+        {
+            RollInventoryRight();
+        }
     }
 
     public List<InventoryItem> GetItems()
@@ -24,7 +31,7 @@ public class Inventory : MonoBehaviour
 
         _items.Add(item);
         item.gameObject.SetActive(false);
-        Messenger<List<InventoryItem>>.Broadcast(GameEvent.INVENTORY_CHANGED, _items);
+        MessageInventoryChanged();
     }
 
     public bool RemoveItem(InventoryItem item)
@@ -32,9 +39,38 @@ public class Inventory : MonoBehaviour
         int deleted = _items.RemoveAll(r => r.name == item.name);
         if (deleted > 0)
         {
-            Messenger<List<InventoryItem>>.Broadcast(GameEvent.INVENTORY_CHANGED, _items);
+            MessageInventoryChanged();
             return true;
         }
         return false;
+    }
+
+    public bool UseCurrentItem(Vector2 position)
+    {
+        if (_items.Count < 1) return false;
+
+        // Deploy
+        InventoryItem item = _items[0];
+        item.gameObject.transform.position = position;
+        item.gameObject.SetActive(true);
+        _items.RemoveAt(0);
+        MessageInventoryChanged();
+        return true;
+    }
+
+    private void RollInventoryRight()
+    {
+        if (_items.Count > 1)
+        {
+            var item = _items[0];
+            _items.RemoveAt(0);
+            _items.Add(item);
+            MessageInventoryChanged();
+        }
+    }
+
+    private void MessageInventoryChanged()
+    {
+        Messenger<List<InventoryItem>>.Broadcast(GameEvent.INVENTORY_CHANGED, _items);
     }
 }
