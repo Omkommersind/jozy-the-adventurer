@@ -25,7 +25,6 @@ public class Inventory : MonoBehaviour
         _items.Add(item);
         item.gameObject.SetActive(false);
         Messenger<List<InventoryItem>>.Broadcast(GameEvent.INVENTORY_CHANGED, _items);
-        Debug.Log(_items);
     }
 
     public bool RemoveItem(InventoryItem item)

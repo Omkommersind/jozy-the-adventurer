@@ -4,4 +4,5 @@ public static class GameEvent
 
     public const string INVENTORY_CHANGED = "INVENTORY_CHANGED";
     public const string ITEM_PUT_TO_INVENTORY = "ITEM_PUT_TO_INVENTORY";
+    public const string ITEM_DEPLOY_ON_GROUND = "ITEM_DEPLOY_ON_GROUND";
 }

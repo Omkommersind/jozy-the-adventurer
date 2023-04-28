@@ -28,6 +28,13 @@ public class InventoryTrioUIController : MonoBehaviour
         for (var i = 0; i < items.Count; i++)
         {
             _images[i].sprite = items[i].Sprite;
+            _images[i].color = new Color(1, 1, 1, 1);
+        }
+
+        for (var i = 3; i < items.Count; i--)
+        {
+            _images[i].sprite = null;
+            _images[i].color = new Color(1, 1, 1, 0);
         }
     }
 }

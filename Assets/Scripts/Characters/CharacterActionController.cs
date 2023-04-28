@@ -35,9 +35,12 @@ public class CharacterActionController : MonoBehaviour
         // First check if there is item under the player and act with it (take most of times)
         List<Collider2D> collisions = new List<Collider2D>();
 
-        ContactFilter2D contactFilter = new ContactFilter2D();
-        contactFilter.useLayerMask = true;
-        contactFilter.layerMask = mask;
+        ContactFilter2D contactFilter = new ContactFilter2D
+        {
+            useLayerMask = true,
+            layerMask = mask,
+            useTriggers = true
+        };
 
         int collisionsCount = _boxCollider2D.OverlapCollider(contactFilter, collisions);
         if (collisionsCount > 0)
