@@ -45,12 +45,27 @@ public class Inventory : MonoBehaviour
         return false;
     }
 
-    public bool UseCurrentItem(Vector2 position)
+    public bool UseCurrentItem(Vector2 position, List<Collider2D> interactiveObjectsCollisions)
     {
         if (_items.Count < 1) return false;
 
+        InventoryItem item = GetCurrentItem();
+        if (item == null) return false;
+
+        if (interactiveObjectsCollisions != null && interactiveObjectsCollisions.Count > 0)
+        {
+            IActionReciever interactoveObject = interactiveObjectsCollisions[0].gameObject.GetComponent<IActionReciever>();
+            bool success = interactoveObject.Interact(item);
+            if (success)
+            {
+                RemoveItem(item);
+                Destroy(item.gameObject);
+                MessageInventoryChanged();
+            }
+            return success;
+        }
+
         // Deploy
-        InventoryItem item = _items[0];
         item.gameObject.transform.position = position;
         item.gameObject.SetActive(true);
         _items.RemoveAt(0);
@@ -62,7 +77,7 @@ public class Inventory : MonoBehaviour
     {
         if (_items.Count > 1)
         {
-            var item = _items[0];
+            var item = GetCurrentItem();
             _items.RemoveAt(0);
             _items.Add(item);
             MessageInventoryChanged();
@@ -72,5 +87,11 @@ public class Inventory : MonoBehaviour
     private void MessageInventoryChanged()
     {
         Messenger<List<InventoryItem>>.Broadcast(GameEvent.INVENTORY_CHANGED, _items);
+    }
+
+    private InventoryItem GetCurrentItem()
+    {
+        if (_items.Count == 0) return null;
+        return _items[0];
     }
 }
