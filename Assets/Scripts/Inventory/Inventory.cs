@@ -54,8 +54,8 @@ public class Inventory : MonoBehaviour
 
         if (interactiveObjectsCollisions != null && interactiveObjectsCollisions.Count > 0)
         {
-            IActionReciever interactoveObject = interactiveObjectsCollisions[0].gameObject.GetComponent<IActionReciever>();
-            bool success = interactoveObject.Interact(item);
+            IActionReceiver interactiveObject = interactiveObjectsCollisions[0].gameObject.GetComponent<IActionReceiver>();
+            bool success = interactiveObject.Interact(item);
             if (success)
             {
                 RemoveItem(item);

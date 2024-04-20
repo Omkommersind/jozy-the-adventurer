@@ -82,13 +82,13 @@ TextureImporter:
     second: jozy_house_door
   - first:
       213: -3424098383925579262
-    second: bottle_big3
+    second: doorjamb7
   - first:
       213: -8466513157695342747
-    second: bottle_big4
+    second: doorjamb8
   - first:
       213: 5962671046545283122
-    second: bottle_big2
+    second: doorjamb9
   - first:
       213: -8017899428081338049
     second: apple_1
@@ -145,10 +145,10 @@ TextureImporter:
     second: black
   - first:
       213: -763600527710289420
-    second: door7
+    second: doorjamb10
   - first:
       213: 141675589054557356
-    second: door5
+    second: doorjamb11
   - first:
       213: -1464474277989057681
     second: door4
@@ -2302,7 +2302,7 @@ TextureImporter:
         width: 24
         height: 48
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -2310,6 +2310,111 @@ TextureImporter:
       bones: []
       spriteID: 6b704b4cb05af6180800000000000000
       internalID: -9119889250438608970
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: doorjamb7
+      rect:
+        serializedVersion: 2
+        x: 472
+        y: 128
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 202702659a82b70d0800000000000000
+      internalID: -3424098383925579262
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: doorjamb8
+      rect:
+        serializedVersion: 2
+        x: 472
+        y: 120
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 567f56df327e08a80800000000000000
+      internalID: -8466513157695342747
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: doorjamb9
+      rect:
+        serializedVersion: 2
+        x: 472
+        y: 112
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 23896d9a9b9afb250800000000000000
+      internalID: 5962671046545283122
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: doorjamb10
+      rect:
+        serializedVersion: 2
+        x: 464
+        y: 136
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4f10783ad552765f0800000000000000
+      internalID: -763600527710289420
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: doorjamb11
+      rect:
+        serializedVersion: 2
+        x: 472
+        y: 136
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cace0f6923557f100800000000000000
+      internalID: 141675589054557356
       vertices: []
       indices: 
       edges: []
