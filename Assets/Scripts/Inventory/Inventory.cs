@@ -59,15 +59,14 @@ public class Inventory : MonoBehaviour
             if (success)
             {
                 RemoveItem(item);
-                Destroy(item.gameObject);
+                item.Use();
                 MessageInventoryChanged();
             }
             return success;
         }
 
         // Deploy
-        item.gameObject.transform.position = position;
-        item.gameObject.SetActive(true);
+        item.PutInWorld(position);
         _items.RemoveAt(0);
         MessageInventoryChanged();
         return true;
