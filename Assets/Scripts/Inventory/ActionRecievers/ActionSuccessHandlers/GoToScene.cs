@@ -8,6 +8,6 @@ public class GoToScene : MonoBehaviour, IActionSuccessHandler
 
     public void OnSuccess()
     {
-        GameManager.instance.ChangeScene(DestinationScene);
+        GameManager.Instance.ChangeScene(DestinationScene);
     }
 }
