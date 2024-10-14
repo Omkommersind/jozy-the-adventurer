@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class BaseActionReceiver : MonoBehaviour, IActionReceiver
 {
-    public InventoryItem RequiredItem;
+    public ItemView RequiredItemView;
     public bool DestroyOnSuccess = true;
     private IActionSuccessHandler[] successHandlers;
 
@@ -20,9 +20,9 @@ public class BaseActionReceiver : MonoBehaviour, IActionReceiver
     }
 
 
-    public bool Interact(InventoryItem item)
+    public bool Interact(ItemView itemView)
     {
-        if (item == null || item == RequiredItem)
+        if (itemView == null || itemView == RequiredItemView)
         {
             OnSuccess();
             return true;

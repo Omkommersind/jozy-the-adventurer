@@ -7,20 +7,11 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
     public static GameManager Instance { get; private set; }
-    public string[] InventoryItemsInfo;
+    public Dictionary<string, List<ItemView>> ItemsData;
     private string _activeScene;
 
     void Awake()
     {
-        /*if (instance == null)
-        {
-            instance = this;
-            Debug.Log("GameManager has been instantiated");
-        }
-        else if (instance != this)
-            Destroy(gameObject);
-
-        DontDestroyOnLoad(gameObject);*/
         if (Instance != null && Instance != this)
         {
             Destroy(this);
@@ -34,6 +25,16 @@ public class GameManager : MonoBehaviour
     void Start()
     {
 
+    }
+
+    public void UpdateItemData(ItemView itemView)
+    {
+        //var scene = SceneManager.GetActiveScene().name;
+        //var index = ItemsData[scene].FindIndex(i => i.Name == itemView.Name);
+        //if (index != -1)
+        //    ItemsData[scene][index] = itemView;
+        //else
+        //    ItemsData[scene].Add(itemView);
     }
 
     public void ChangeScene(string sceneName)

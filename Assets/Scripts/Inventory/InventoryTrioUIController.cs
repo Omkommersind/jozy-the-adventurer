@@ -13,7 +13,7 @@ public class InventoryTrioUIController : MonoBehaviour
 
     private void Awake()
     {
-        Messenger<List<InventoryItem>>.AddListener(GameEvent.INVENTORY_CHANGED, UpdateImages);
+        Messenger<List<ItemView>>.AddListener(GameEvent.INVENTORY_CHANGED, UpdateImages);
     }
 
     private void Start()
@@ -23,11 +23,11 @@ public class InventoryTrioUIController : MonoBehaviour
         _images[2] = Item1;
     }
 
-    void UpdateImages(List<InventoryItem> items)
+    void UpdateImages(List<ItemView> items)
     {
         for (var i = 0; i < items.Count; i++)
         {
-            _images[i].sprite = items[i].Sprite;
+            _images[i].sprite = items[i].SpriteRenderer.sprite;
             _images[i].color = new Color(1, 1, 1, 1);
         }
 
