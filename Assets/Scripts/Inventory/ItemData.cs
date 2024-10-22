@@ -2,7 +2,7 @@ using UnityEngine;
 
 namespace Assets.Scripts.Inventory
 {
-    [CreateAssetMenu(fileName = "New ItemData", menuName = "ScriptableObjects/Jozy/Item Data", order = 51)]
+    [CreateAssetMenu(fileName = "New ItemData", menuName = "ScriptableObjects/Jozy/ItemData", order = 52)]
     public class ItemData : ScriptableObject
     {
         [SerializeField]
