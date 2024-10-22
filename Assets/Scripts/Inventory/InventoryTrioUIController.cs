@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Assets.Scripts.Inventory;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -27,7 +28,7 @@ public class InventoryTrioUIController : MonoBehaviour
     {
         for (var i = 0; i < items.Count; i++)
         {
-            _images[i].sprite = items[i].SpriteRenderer.sprite;
+            _images[i].sprite = items[i].Data.Sprite;
             _images[i].color = new Color(1, 1, 1, 1);
         }
 
