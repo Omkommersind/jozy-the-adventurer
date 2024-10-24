@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using Assets.Scripts.Inventory;
+using Assets.Scripts.System;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -14,7 +15,7 @@ public class InventoryTrioUIController : MonoBehaviour
 
     private void Awake()
     {
-        Messenger<List<ItemView>>.AddListener(GameEvent.INVENTORY_CHANGED, UpdateImages);
+        Messenger<List<ItemView>>.AddListener(GameEvent.InventoryChanged, UpdateImages);
     }
 
     private void Start()

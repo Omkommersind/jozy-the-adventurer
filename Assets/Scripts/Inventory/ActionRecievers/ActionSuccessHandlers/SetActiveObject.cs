@@ -1,14 +1,15 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class SetActiveObject : MonoBehaviour, IActionSuccessHandler
+namespace Assets.Scripts.Inventory.ActionRecievers.ActionSuccessHandlers
 {
-    public GameObject obj;
-    public bool ActiveSet;
-
-    public void OnSuccess()
+    public class SetActiveObject : MonoBehaviour, IActionSuccessHandler
     {
-        obj.SetActive(ActiveSet);
+        public GameObject Obj;
+        public bool ActiveSet;
+
+        public void OnSuccess()
+        {
+            Obj.SetActive(ActiveSet);
+        }
     }
 }

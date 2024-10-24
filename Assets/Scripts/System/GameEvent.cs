@@ -1,7 +1,10 @@
-public static class GameEvent
+namespace Assets.Scripts.System
 {
-    public const string SPEED_CHANGED = "SPEED_CHANGED";
+    public static class GameEvent
+    {
+        public const string SpeedChanged = "SPEED_CHANGED";
 
-    public const string INVENTORY_CHANGED = "INVENTORY_CHANGED";
-    public const string ITEM_PUT_TO_INVENTORY = "ITEM_PUT_TO_INVENTORY";
+        public const string InventoryChanged = "INVENTORY_CHANGED";
+        public const string ItemPutToInventory = "ITEM_PUT_TO_INVENTORY";
+    }
 }

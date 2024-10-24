@@ -1,16 +1,18 @@
 using System.Collections;
 using System.Collections.Generic;
 using Assets.Scripts.Inventory;
+using Assets.Scripts.Inventory.ActionRecievers;
+using Assets.Scripts.System;
 using UnityEngine;
 
 public class Inventory : MonoBehaviour
 {
     public int MaxItems = 3;
-    private readonly List<ItemView> _items = new List<ItemView>();
+    private readonly List<ItemData> _items = new List<ItemData>();
 
     private void Awake()
     {
-        Messenger<ItemView>.AddListener(GameEvent.ITEM_PUT_TO_INVENTORY, AddItem);  // Todo: simple method
+        Messenger<ItemData>.AddListener(GameEvent.ItemPutToInventory, AddItem);  // Todo: simple method
     }
     void Update()
     {
@@ -20,22 +22,22 @@ public class Inventory : MonoBehaviour
         }
     }
 
-    public List<ItemView> GetItems()
+    public List<ItemData> GetItems()
     {
         return _items;
     }
 
-    public void AddItem(ItemView itemView)
+    public void AddItem(ItemData itemData)
     {
         if (_items.Count >= MaxItems) return; // If max items - put last itemView from inventory on ground
-        if (_items.Contains(itemView)) return;
+        if (_items.Contains(itemData)) return;
 
-        _items.Add(itemView);
-        itemView.gameObject.SetActive(false);
+        _items.Add(itemData);
+        //itemView.gameObject.SetActive(false); Todo
         MessageInventoryChanged();
     }
 
-    public bool RemoveItem(ItemView itemView)
+    public bool RemoveItem(ItemData itemView)
     {
         int deleted = _items.RemoveAll(r => r.name == itemView.name);
         if (deleted > 0)
@@ -50,24 +52,24 @@ public class Inventory : MonoBehaviour
     {
         if (_items.Count < 1) return false;
 
-        ItemView itemView = GetCurrentItem();
-        if (itemView == null) return false;
+        ItemData item = GetCurrentItem();
+        if (item == null) return false;
 
         if (interactiveObjectsCollisions != null && interactiveObjectsCollisions.Count > 0)
         {
             IActionReceiver interactiveObject = interactiveObjectsCollisions[0].gameObject.GetComponent<IActionReceiver>();
-            bool success = interactiveObject.Interact(itemView);
+            bool success = interactiveObject.Interact(item);
             if (success)
             {
-                RemoveItem(itemView);
-                itemView.Use();
+                RemoveItem(item);
+                item.Use();
                 MessageInventoryChanged();
             }
             return success;
         }
 
         // Deploy
-        itemView.PutInWorld(position);
+        item.PutInWorld(position);
         _items.RemoveAt(0);
         MessageInventoryChanged();
         return true;
@@ -86,10 +88,10 @@ public class Inventory : MonoBehaviour
 
     private void MessageInventoryChanged()
     {
-        Messenger<List<ItemView>>.Broadcast(GameEvent.INVENTORY_CHANGED, _items);
+        Messenger<List<ItemData>>.Broadcast(GameEvent.InventoryChanged, _items);
     }
 
-    private ItemView GetCurrentItem()
+    private ItemData GetCurrentItem()
     {
         if (_items.Count == 0) return null;
         return _items[0];

@@ -1,45 +1,45 @@
-using System.Collections;
-using System.Collections.Generic;
-using Assets.Scripts.Inventory;
 using UnityEngine;
 
-public class BaseActionReceiver : MonoBehaviour, IActionReceiver
+namespace Assets.Scripts.Inventory.ActionRecievers
 {
-    public ItemView RequiredItemView;
-    public bool DestroyOnSuccess = true;
-    private IActionSuccessHandler[] successHandlers;
-
-    private void Start()
+    public class BaseActionReceiver : MonoBehaviour, IActionReceiver
     {
-        successHandlers = GetComponents<IActionSuccessHandler>();
-    }
+        public ItemData RequiredItem;
+        public bool DestroyOnSuccess = true;
+        private IActionSuccessHandler[] _successHandlers;
 
-    public bool Interact()
-    {
-        OnSuccess();
-        return true;
-    }
+        private void Start()
+        {
+            _successHandlers = GetComponents<IActionSuccessHandler>();
+        }
 
-
-    public bool Interact(ItemView itemView)
-    {
-        if (itemView == null || itemView == RequiredItemView)
+        public bool Interact()
         {
             OnSuccess();
             return true;
         }
-        return false;
-    }
 
-    protected void OnSuccess()
-    {
-        foreach (IActionSuccessHandler handler in successHandlers) {
-            handler.OnSuccess();
-        }
-        
-        if (DestroyOnSuccess)
+
+        public bool Interact(ItemData item)
         {
-            Destroy(gameObject);
+            if (item == null || item == RequiredItem)
+            {
+                OnSuccess();
+                return true;
+            }
+            return false;
+        }
+
+        protected void OnSuccess()
+        {
+            foreach (IActionSuccessHandler handler in _successHandlers) {
+                handler.OnSuccess();
+            }
+        
+            if (DestroyOnSuccess)
+            {
+                Destroy(gameObject);
+            }
         }
     }
 }

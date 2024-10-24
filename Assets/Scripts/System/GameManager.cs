@@ -8,7 +8,7 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
     public static GameManager Instance { get; private set; }
-    public Dictionary<string, List<ItemView>> ItemsData;
+    public Dictionary<string, List<ItemData>> ItemsData;
     private string _activeScene;
 
     void Awake()
@@ -28,14 +28,14 @@ public class GameManager : MonoBehaviour
 
     }
 
-    public void UpdateItemData(ItemView itemView)
+    public void UpdateItemData(ItemData item)
     {
-        //var scene = SceneManager.GetActiveScene().name;
-        //var index = ItemsData[scene].FindIndex(i => i.Name == itemView.Name);
-        //if (index != -1)
-        //    ItemsData[scene][index] = itemView;
-        //else
-        //    ItemsData[scene].Add(itemView);
+        var scene = SceneManager.GetActiveScene().name;
+        var index = ItemsData[scene].FindIndex(i => i.Name == item.Name);
+        if (index != -1)
+            ItemsData[scene][index] = item;
+        else
+            ItemsData[scene].Add(item);
     }
 
     public void ChangeScene(string sceneName)

@@ -1,7 +1,8 @@
-using Assets.Scripts.Inventory;
-
-interface IActionReceiver
+namespace Assets.Scripts.Inventory.ActionRecievers
 {
-    public bool Interact();
-    public bool Interact(ItemView itemView);
+    interface IActionReceiver
+    {
+        public bool Interact();
+        public bool Interact(ItemData item);
+    }
 }
